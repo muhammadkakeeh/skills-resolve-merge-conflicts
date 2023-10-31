@@ -32,7 +32,7 @@ jobs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 
   on_merge:
-    name: On merge
+    name: On resolve merge conflict 
     needs: get_current_step
 
     # We will only run this action when:
@@ -62,3 +62,5 @@ jobs:
           from_step: 4
           to_step: X
           branch_name: my-resume
+
+
